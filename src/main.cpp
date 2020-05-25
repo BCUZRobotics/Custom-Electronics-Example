@@ -54,6 +54,12 @@ void send_print(char value){
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
+	//Set up the communication. Takes about 1/8th of a second
+	init_comm();
+	pros::delay(10);
+	flush();
+	pros::delay(10);
+	setBaud();
 }
 
 /**
@@ -101,6 +107,12 @@ void autonomous() {}
  * task, not resume it from where it left off.
  */
 void opcontrol() {
+	//Send and recieve alphabet as a test
+	for(int i = 65; i <= 90; i++){
+		send_print(i);
+		recv_print();
+		pros::delay(97);
+	}
 	while (true) {
 		pros::delay(20);
 	}
