@@ -9,7 +9,7 @@ To setup your PROS Project to for custom electronics communication you need to
 * Include the pros\/apix.h
 * Include okapi if using okapi
 * Use namespace of choice
-* Add cpp includes for <iostream>, <string>, <sstream>
+* Add cpp includes for \<iostream\>, \<string\>, \<sstream\>
 * These are useful for receiving numbers from the Custom Electronics
 
 2. Set up initialize
